@@ -17,6 +17,8 @@ class Drawing:
         self.temp_list = []
         self.target_color = ""
         self.write_string = ""
+        self.file_name = ""
+        self.output_file = None
    
     def command_router(self, command, image):
         self.image = image
@@ -130,13 +132,13 @@ class Drawing:
 
     def write_to_file(self, image):
         self.write_string = ""
-        file_name = self.command[2:]
+        self.file_name = self.command[2:]
         for num_row in self.image:
             self.write_string += " ".join(num_row)
             self.write_string += "\n"
 
-        output_file = fw.FileWriter(file_name)
-        output_file.file_write_all_str(self.write_string)
+        self.output_file = fw.FileWriter(file_name)
+        self.output_file.file_write_all_str(self.write_string)
         
 
 
