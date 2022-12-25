@@ -137,7 +137,7 @@ class Drawing:
             self.write_string += " ".join(num_row)
             self.write_string += "\n"
 
-        self.output_file = fw.FileWriter(file_name)
+        self.output_file = fw.FileWriter(self.file_name)
         self.output_file.file_write_all_str(self.write_string)
         
 
