@@ -1,5 +1,7 @@
 """
+Graphical Editor Problem
 
+Accept user input to create text type images
 """
 import Interface as Inter
 import file_writer as fw
@@ -48,7 +50,6 @@ class Drawing:
         if self.image == None:
             self.rows = int(self.command[4])
             self.cols = int(self.command[2])
-
             self.image = [["1" for i in range(self.cols)] for i in range(self.rows)]
             print(self.image)
         return self.image
@@ -142,7 +143,6 @@ class Drawing:
         
 
 
-
 def execute_main():
     return_command = ""
     image = None
@@ -154,8 +154,6 @@ def execute_main():
             image = process_drawing.command_router(return_command, image)
         else:
             continue
-
-
 
 
 if __name__ == "__main__":

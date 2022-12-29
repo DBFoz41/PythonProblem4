@@ -1,5 +1,5 @@
 """
-
+Interface class, call to this interface method controls a user interface while loop
 """
 
 class Interface:
